@@ -1,0 +1,45 @@
+<!--Include header-->
+<%- include('include/_header')%>
+<!--/Include header-->
+
+
+   <!--Add Students Section and Show Students Section-->
+    <!--Main site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter mt-4">
+                    <a href="/AddStudent" class="btn border-shadow rounded-pill"><span class="text-gradient">Add Students <i class="fa-solid fa-user"></i></span></a>
+                </div>
+                <div class="filter mt-4">
+                <a href="/logout" class="btn border-shadow rounded-pill"><span class="text-gradient"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</span></a>
+                </div>
+            </div>
+           
+       
+        <!--form handling-->
+        <form action="/" method="post">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Score</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Include Table-->
+                   <%- include('include/_show') %>
+                   <!--/Include Table -->
+                </tbody>
+            </table>
+        </form>
+    
+    </div>
+    </main>
+
+<!--Include footer-->
+<%- include('include/_footer')%>
+<!-- /Include footer -->

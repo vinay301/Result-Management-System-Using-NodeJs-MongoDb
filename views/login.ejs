@@ -1,0 +1,31 @@
+
+<!--Include header-->
+<%- include('include/_header')%>
+<!--/Include header-->
+
+<!--Login Form-->
+<div class="login">
+<div class="login-form">
+    <h2>Log In</h2>
+    <% if(locals.logout) { %>
+        <div class="text-white alter alert-success text-center">
+            <%= logout %>
+        </div>
+        <% } %>
+    <form action="/teacherLogin" method="post">
+        <div class="field">
+           <div class="fas fa-envelope"></div>
+           <input type="email" placeholder="Enter E-mail" name="email">
+        </div>
+        <div class="field">
+            <div class="fas fa-lock"></div>
+            <input type="password" placeholder="Enter password" name="password">
+         </div>
+         <button type="submit">Login</button>
+    </form>
+</div>
+</div>
+
+<!--Include footer-->
+<%- include('include/_footer')%>
+<!--/Include footer-->

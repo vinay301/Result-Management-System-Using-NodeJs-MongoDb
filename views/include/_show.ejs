@@ -1,0 +1,17 @@
+<% var sum %>
+<% var options = { year: 'numeric', month: 'long', day: 'numeric' }; %>
+<% for(var i=0; i < students.length; i++){ %>
+    <% sum = i+1%> 
+<tr>
+    <td><%= students[i].rollNo %></td>
+    <td><%= students[i].studentName %></td>
+    <td><%= students[i].Dob ? new Date(students[i].Dob).toLocaleDateString("en-US", options) : '' %></td>
+    <td><%= students[i].score %></td>
+    <td>
+        <a href="/UpdateStudent?id=<%= students[i]._id %>" class="btn border-shadow update"><span class="text-gradient"><i class="fa-solid fa-pen"></i></span></a>
+        <a class="btn border-shadow delete"data-id=<%= students[i]._id %> ><span class="text-gradient"><i class="fa-solid fa-trash"></i></span></a>
+    </td>
+</tr>
+<% } %>
+
+<h6>total <%= sum %> students</h6>

@@ -1,0 +1,34 @@
+<% var options = { year: 'numeric', month: 'long', day: 'numeric' }; %>
+<!--Include header-->
+<%- include('include/_header')%>
+<!--/Include header-->
+<div class="front">
+<div class="container">
+ <h4 class="text-center mt-5 mb-3">Result of <%= result.studentName %></h4>
+<div class="resultTable mt-5">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Roll no.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date of birth</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr>
+          <td><%= result.rollNo %> </td>
+          <td><%= result.studentName %> </td>
+          <td><%= result.Dob ? new Date(result.Dob).toLocaleDateString("en-US", options) : '' %> </td>
+          <td><%= result.score %> </td>
+        </tr>
+        
+      </tbody>
+    </table>    
+</div>
+</div>
+</div>
+
+<!--Include footer-->
+<%- include('include/_footer')%>
+<!--/Include footer-->
